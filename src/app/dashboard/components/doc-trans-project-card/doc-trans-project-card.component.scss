@@ -1,0 +1,262 @@
+@import "variables";
+
+.project-card {
+    padding: 20px;
+    border-radius: 20px;
+    margin: 0;
+    background-color: white;
+    justify-content: center;
+    overflow: hidden;
+    .project-left-col {
+        .lang {
+            height: 15%;
+            align-items: center;
+            justify-content: center;
+            margin-right: 30px;
+        }   
+        .detail {
+            display: flex;
+            flex-direction: column;
+            padding-right: 30px;
+            input, .project-detail-input {
+                display: block;
+                height: 38px;
+                padding: 25px 20px;
+                font-weight: 700;
+                border: none;
+                border-bottom: 1px solid $smoke;
+                margin-bottom: 10px;
+                font-size: 18px;
+                color: #333;
+                background-color: #fff;
+                &:focus {
+                    outline: none;
+                }
+                &::placeholder {
+                    font-weight: 700;
+                    font-size: 18px;
+                }
+                &.title {
+                    border-bottom-color: $royal-blue;
+                    background-image: none;
+                    color: $royal-blue;
+                    &::placeholder {
+                        color: $royal-blue;
+                    }
+                }
+            }
+            .project-detail-picker {
+                cursor: pointer;
+                margin-bottom: 10px;
+                height: 50px;
+                padding: 10px 20px 9px 56px;
+                border-bottom: solid 1px $smoke;
+                font-size: 18px;
+                font-weight: 700;
+                color: $grey;
+                background-repeat: no-repeat;
+                &.dress-code {
+                    background-image: url(#{$img-path}/dress-code-icon.png);
+                    background-position: 21px 50%;
+                    background-size: 17px;
+                }
+            }
+
+            .note-field {
+                height: 80px;
+                padding-left: 56px;
+                border-style: none none solid;
+                border-width: 1px;
+                border-color: black black $gold;
+                background-image: url(#{$img-path}/note-icon.png);
+                background-position: 18px 8px;
+                background-size: 24px;
+                background-repeat: no-repeat;
+                color: $gold;
+                font-size: 18px;
+                font-weight: 600;
+                &:focus {
+                    outline: none;
+                }
+                &::placeholder {
+                    color: $gold;
+                }
+            }
+        }
+    }
+
+    .project-right-col {
+        .heading {
+            display: flex;
+            margin: 0;
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            border-radius: 10px;
+            background-color: $white-smoke;
+            color: $dim-grey;
+            .text-div {
+                width: 80%;
+                padding: 15px;
+                h3 {
+                    margin: 0;
+                    font-size: 18px;
+                    line-height: 160%;
+                    font-weight: 700;
+                }
+                p {
+                    font-size: 14px;
+                    margin: 0;
+                }
+            }
+            .checkbox-div {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                height: 100%;
+                margin-top: 10px;
+            }
+        }
+
+        .project-detail-picker {
+            cursor: pointer;
+            margin-bottom: 10px;
+            height: 50px;
+            padding: 10px 20px 9px 56px;
+            border-bottom: solid 1px $smoke;
+            font-size: 18px;
+            font-weight: 700;
+            color: $grey;
+            background-repeat: no-repeat;
+            &.date {
+                background-image: url(#{$img-path}/nature-icon.png);
+                background-position: 20px 50%;
+                background-size: 15px;
+            }
+        }
+
+        .price-wrapper {
+            display: flex;
+            margin-top: 20px;
+            margin-right: -65px;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: end;
+            -webkit-align-items: flex-end;
+            -ms-flex-align: end;
+            align-items: flex-end;
+            ul {
+                display: flex;
+                list-style: none;
+                li {
+                    &.value {
+                        width: 30%;
+                    }
+                }
+            }
+
+            .price-item-wrapper {
+                display: flex;
+                margin-bottom: 10px;
+                -webkit-box-pack: center;
+                -webkit-justify-content: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -webkit-align-items: center;
+                -ms-flex-align: center;
+                align-items: center;
+                .price-item-text {
+                    margin-right: 15px;
+                    color: $sea-green;
+                }
+                .price-item-back {
+                    display: flex;
+                    width: 200px;
+                    height: 40px;
+                    padding-left: 20px;
+                    border-top-left-radius: 50px;
+                    border-bottom-left-radius: 50px;
+                    -webkit-box-pack: start;
+                    -webkit-justify-content: flex-start;
+                    -ms-flex-pack: start;
+                    justify-content: flex-start;
+                    -webkit-box-align: center;
+                    -webkit-align-items: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    background-color: $azure;
+                    .price-item-amount {
+                        color: $sea-green;
+                        font-weight: 700;
+                    }
+                }
+
+                &.duration {
+                    .price-item-text {
+                        color: $sea-green;
+                    }
+                    .price-item-back {
+                        background-color: $azure;
+                        .price-item-amount {
+                            color: $sea-green;
+                        }
+                    }
+                }
+                &.project-amount {
+                    .price-item-text {
+                        color: $grey;
+                    }
+                    .price-item-back {
+                        background-color: $smoke;
+                        .price-item-amount {
+                            color: $grey;
+                        }
+                    }
+                }
+                &.tax {
+                    .price-item-text {
+                        color: $grey;
+                    }
+                    .price-item-back {
+                        background-color: $smoke;
+                        .price-item-amount {
+                            color: $grey;
+                        }
+                    }
+                }
+                &.final-fee {
+                    .price-item-text {
+                        color: $lime-green;
+                    }
+                    .price-item-back {
+                        background-color: $honeydew;
+                        .price-item-amount {
+                            color: $lime-green;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+.button-row {
+    display: flex;
+    margin: 0;
+    margin-top: 20px;
+    justify-content: flex-end
+}

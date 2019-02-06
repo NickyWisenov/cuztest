@@ -1,0 +1,25 @@
+<div
+  class="doc-type-selector"
+  (click)="onClickHandler($event)"
+  >
+  {{ selected_nature == null ? 'Nature' : selected_nature.name }}
+</div>
+<app-info-select-modal  
+  [(showable)]="show_modal"
+  [ClickDoneBtn]="onClickModalDoneBtn.bind(this)"
+  [ClickCancelBtn]="onClickModalCancelBtn.bind(this)"
+  >
+  <app-search-input></app-search-input>
+  <div class="modal-body">
+    <div class="nature-group" *ngFor="let nature_group of nature_groups">
+      <div class="nature-group-name">{{ nature_group.name }}</div>
+      <a
+        class="nature"
+        href="#"
+        *ngFor="let nature of nature_group.natures"
+        [class.selected]="selected_nature != null && nature.id == selected_nature.id"
+        (click)="onSelectDoctype(nature, $event)"
+      >{{ nature.name }}</a>
+    </div>
+  </div>
+</app-info-select-modal>

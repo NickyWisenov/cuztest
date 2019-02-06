@@ -1,0 +1,23 @@
+<div *ngIf="showable" class="info-select-modal-wrapper">
+  <div [@info-select-modal] *ngIf="showable" class="info-select-modal">
+      <ng-content></ng-content>    
+      <div class="info-select-modal-footer row">
+        <div class="col-sm-9 btn-col">
+          <app-general-button
+            (click)="ClickCancelBtn()"
+            color="light-grey"  
+          >
+            CANCEL
+          </app-general-button>
+        </div>
+        <div class="col-sm-3 btn-col">
+          <app-general-button 
+            (click)="ClickDoneBtn()"
+            color="lime-green"
+          >
+            DONE
+          </app-general-button>
+        </div>
+      </div>
+    </div>
+</div>

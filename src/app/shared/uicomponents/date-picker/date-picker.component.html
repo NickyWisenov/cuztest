@@ -1,0 +1,12 @@
+<div
+  class="date-picker"
+  (click)="onClickHandler($event)"
+  >
+  {{ display_date_name }}
+</div>
+<app-info-select-modal  
+  [(showable)]="show_modal"
+  [ClickDoneBtn]="onClickModalDoneBtn.bind(this)"
+  >
+  <h3>Select the Date and Time</h3>
+</app-info-select-modal>

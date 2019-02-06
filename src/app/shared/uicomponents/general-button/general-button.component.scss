@@ -1,0 +1,35 @@
+@import "variables";
+
+.general-button {
+    margin: 5px;
+    padding: 14px 20px;
+    border-radius: 10px;
+    -webkit-transition: box-shadow .4s ease;
+    transition: box-shadow .4s ease;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center; 
+    border:none;
+    cursor: pointer;
+    width: 100%;
+    &:hover {
+        outline: none;
+    }
+    &:focus {
+        outline: none;
+    }
+    &.lime-green {
+        background-color: $lime-green;
+        &:hover {
+            box-shadow: 0 10px 30px -5px rgba($lime-green,.8);
+        }
+    }
+
+    &.light-grey {
+        background-color: $light-grey;
+        &:hover {
+            box-shadow: 0 10px 30px -5px rgba($light-grey,.8);
+        }
+    }
+}

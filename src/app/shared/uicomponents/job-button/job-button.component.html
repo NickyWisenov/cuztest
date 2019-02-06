@@ -1,0 +1,17 @@
+<a href="{{dest}}" class="job-button" [ngClass]="job_type" [ngSwitch]="job_type">
+    <div *ngSwitchCase="'on-site-interpretation'">
+        <strong>ON-SITE</strong>
+        INTERPRETATION &nbsp;&nbsp;
+        <strong>&gt;</strong>
+    </div>
+    <div *ngSwitchCase="'document-translation'">
+        <strong>Document</strong>
+        TRANSLATION &nbsp;&nbsp;
+        <strong>&gt;</strong>
+    </div>
+    <div *ngSwitchCase="'video-audio-interpretation'">
+        <strong>VIDEO/AUDIO</strong>
+        INTERPRETATION &nbsp;&nbsp;
+        <strong>&gt;</strong>
+    </div>
+</a>

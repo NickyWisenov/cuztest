@@ -1,0 +1,56 @@
+<div class="login-section container">
+  <div class="login-wrapper row">
+      <div class="col-xs-12 col-sm-6 login-text-div">
+        <h1 class="login-heading">
+          Select a
+          <br />
+          <strong>Login Method</strong>
+        </h1>
+        <hr class="login-seperator"/>
+        <p class="login-text-paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia lorem massa, in auctor ligula ultricies non. Donec nibh elit, venenatis eu erat id, cursus egestas tortor.
+        </p>
+        <a href="/sign-up">Don't have an account? Create a new one now!</a>
+      </div>
+      <div class="col-xs-12 col-sm-6 login-button-div">
+        <div class="login-tabbed-forms">
+          <div class="login-tab-menus">
+            <div 
+              class="tab-item"
+              [ngClass] = "active_tab == 'password' ? 'active' : ''"
+              data-tabname="password"
+              (click)="onClickHandler($event)"
+              >
+              Password
+            </div>
+            <div 
+              class="tab-item"
+              [ngClass] = "active_tab == 'login-code' ? 'active' : ''"
+              data-tabname="login-code" 
+              (click)="onClickHandler($event)"
+              >
+              Login Code
+            </div>
+          </div>
+          <div class="login-tab-menu-contents">
+            <div class="login-section-form" *ngIf="active_tab == 'password'" [ngClass]="active_tab == 'password' ? 'active' : ''" data-tab-link="password">
+              <form name="passwordform" id="passwordForm">
+                <input type="email" name="email" [(ngModel)]="email" placeholder="Email"/>
+                <input type="password" name="password" [(ngModel)]="password" placeholder="Password"/>
+              </form>
+            </div>
+            <div class="login-section-form" *ngIf="active_tab == 'login-code'" [ngClass]="active_tab == 'login-code' ? 'active' : ''"  data-tab-link="login-code">
+                <form name="logincodeform" id="logincodeForm">
+                  <input type="text" name="logincode" [(ngModel)]="logincode" placeholder="Login Code"/>
+                </form>
+              </div>
+          </div> 
+        </div>
+        <app-login-section-button 
+          route_dest="security-code"
+          [ClickHandler]="onClickLoginBtn.bind(this)"
+          >Let's Go!</app-login-section-button>
+        <a href="#">Forgot Password?</a>
+      </div>
+  </div>
+</div>

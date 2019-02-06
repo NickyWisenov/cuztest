@@ -1,0 +1,73 @@
+@import "variables";
+
+.job-section-side-menu-wrapper {
+    display: block;    
+    height: 70vh;
+    padding-top: 20px;
+    .job-section-side-menu {
+        height: 70%;
+        border-radius: 20px;
+        background-color: hsla(0,0%,100%,.2);
+        a {
+            display: inline-block;
+            width: 100%;
+            color: #fff;
+            line-height: inherit;
+            text-decoration: none;
+            cursor: pointer;
+            padding: 24px 22px;
+            -webkit-transition: all .4s ease;
+            transition: all .4s ease;
+            font-size: 18px;
+            font-weight: 700;
+            padding-left: 60px;
+            border-style: none;
+            border-radius: 20px;
+            border-color: hsla(0,0%,100%,0);
+            background-position: 20px 50%;
+            background-repeat: no-repeat;
+            background-size: 26px;
+            
+            &:hover {
+                background-color: hsla(0,0%,100%,.2);
+            }
+            &.active {
+                background-color: white;
+                color: $royal-blue;
+            }
+            &.find {
+                background-image: url(#{$img_path}/job-find@2x.png);
+                &.active {
+                    background-image: url(#{$img_path}/job-find_active@2x.png);
+                }
+            }
+            &.jobs {
+                background-image: url(#{$img_path}/jobs@2x.png);
+                &.active {
+                    background-image: url(#{$img_path}/jobs_active@2x.png);
+                }
+            }
+        }
+    }
+    .job-section-side-footer-menu {
+        height: 30%;
+        padding-top: 15px;
+        font-size: 16px;
+        font-weight: 400;
+        a {
+            display: inline-block;
+            width: 100%;
+            padding-left: 20px;
+            color: white;
+            img.desktop-app {
+                width: 20px;
+                height: 20px;
+                margin-left: 5px;
+            }
+            img.logout {
+                width: 20px;
+                margin-left: 5px;
+            }
+        }
+    }
+}

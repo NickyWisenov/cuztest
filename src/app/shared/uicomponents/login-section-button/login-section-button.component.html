@@ -1,0 +1,9 @@
+<a 
+  href="javascript:;"
+  class="login-section-button"  
+  [ngClass]="icon != '' ? 'icon ' + icon : ''"
+  (click)="ClickHandler()"
+  >
+  <ng-content></ng-content>
+  <span>></span>
+</a>

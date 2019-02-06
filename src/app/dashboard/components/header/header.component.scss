@@ -1,0 +1,48 @@
+@import "variables";
+
+.find-job-section-heading {
+    display: flex;
+    width: 100%;
+    height: 90px;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    a.logo {
+        width: 20%;
+        min-width: 240px;
+        background-image: url(#{$img-path}/cuz-white-logo-text.png);
+        background-size: 100px;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+    .find-job-section-nav {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        width: 80%;
+        margin-right: 25px;
+        margin-left: 25px;
+        padding-right: 10px;
+        padding-left: 10px;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        border-bottom: 1px solid #fff;
+        .nav-content-title {
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+            color: #fff;
+            font-weight: 700;
+            font-size: 18px;
+        }
+    }
+}

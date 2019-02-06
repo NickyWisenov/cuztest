@@ -1,0 +1,36 @@
+<div class="job-section-side-menu-wrapper">
+  <div class="job-section-side-menu">
+    <a href="/job-type" 
+      class="find" 
+      data-sidemenu="find" 
+      (click)="onClickHander($event)"
+      [class.active]="active_sidemenu == 'find'"
+      >FIND</a>
+    <a href="/" 
+      class="jobs" 
+      data-sidemenu="jobs" 
+      (click)="onClickHander($event)"
+      [class.active]="active_sidemenu == 'jobs'"
+      >JOBS</a>
+  </div>
+  <div class="job-section-side-footer-menu">
+    <a href="#">
+      Get Desktop App 
+      <img src="../../assets/imgs/windows.png" class="desktop-app" />
+      <img src="../../assets/imgs/mac.png" class="desktop-app" />
+    </a>
+    <a  href="#">
+      Home Page
+    </a>
+    <a href="#">
+      Cotact Us
+    </a>
+    <a href="#">
+      Support
+    </a>
+    <a href="#">
+      Logout
+      <img src="../../assets/imgs/logout.png" class="logout"/>
+    </a>
+  </div>
+</div>

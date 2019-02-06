@@ -1,0 +1,42 @@
+@import "variables";
+
+.introvideo-container {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    top: 0;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    &.hide-video {
+        display: none;
+        transition: display 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    
+    .videoframe {
+        width: 51.65vw;
+        height: 30vw;
+        border: none;
+    }
+
+    .introvideo-close-button {
+        position: absolute;
+        right: 24px;
+        height: 15px;
+        background-image: url(#{$img-path}/close.svg);
+        background-size: 18px;
+        opacity: 0.8;
+        width: 15px;
+        top: 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+        &:hover {
+            cursor: pointer;
+            opacity: 1;
+            transition: opacity 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+    }
+
+}

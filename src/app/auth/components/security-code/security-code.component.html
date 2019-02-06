@@ -1,0 +1,41 @@
+<div class="login-section container">
+    <div class="login-wrapper row">
+        <div class="col-xs-12 col-sm-6 login-text-div">
+          <h1 class="login-heading">
+            Enter your
+            <br />
+            <strong>Security Code</strong>
+          </h1>
+          <hr class="login-seperator"/>
+          <p class="login-text-paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia lorem massa, in auctor ligula ultricies non. Donec nibh elit, venenatis eu erat id, cursus egestas tortor.
+          </p>
+          <a href="/sign-up">Wrong Email?</a>
+        </div>
+        <div class="col-xs-12 col-sm-6 login-button-div">
+          <div class="login-section-form">
+            <form name="logincodeform" id="logincodeForm">
+              <input type="text" name="logincode" [(ngModel)]="logincode" placeholder="6 Digits Code"/>
+              <div class="remaining-time-text">
+                Remaining Time: 
+                <strong>
+                  <countdown 
+                    [config]="{leftTime: 180}" 
+                    (finish)="onFinishCountingDown()"
+                    >$!m!:$!s!</countdown>
+                </strong>
+              </div>
+            </form>
+          </div>
+          <app-login-section-button 
+            route_dest="job-type"
+            [ClickHandler]="onClickContinueBtn.bind(this)"
+            >Continue</app-login-section-button>
+          <a
+            href="#"
+            (click)="onClickResendCode()"
+            >Resend Code</a>
+        </div>
+    </div>
+  </div>
+  

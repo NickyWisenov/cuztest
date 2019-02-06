@@ -1,0 +1,176 @@
+@import "variables";
+
+.select-lang-button {
+    display: inline-block;
+    position: relative;
+    z-index: 998;
+    width: 100%;
+    // width: 12.7vw;
+    // background-color: $azure;
+    text-decoration: none;
+    .select-lang-arrow {
+        position: absolute;
+        z-index: 1;
+        width: 20px;
+        height: 20px;
+        border: 1px solid $sea-green;
+        border-radius: 4px;
+        background-color: $azure;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    .select-lang-main {
+        position: relative;
+        z-index: 3;
+        height: 50px;
+        text-align: center;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        border: 1px solid $sea-green;
+        border-radius: 10px;
+        background-color: $azure;
+        .select-lang-arrow-over {
+            position: absolute;
+            z-index: 2;
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            background-color: $azure;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        .select-lang-text {
+            position: relative;
+            z-index: 4;
+            color: $sea-green;
+            font-weight: 700;
+        }
+    }
+    
+    &.source {
+        margin-right: 10px;
+        .select-lang-arrow {
+            top: 9px;
+            right: -7px;
+        }
+        .select-lang-main {
+            .select-lang-arrow-over {
+                top: 8px;
+                right: -6px;
+            }
+        }
+    }
+    &.target {
+        margin-left: 10px;
+        .select-lang-arrow {
+            top: 20px;
+            left: -7px;
+        }
+        .select-lang-main {
+            .select-lang-arrow-over {
+                top: 20px;
+                left: -6px;
+            }
+        }
+    }
+
+
+    &.royal-blue {
+        .select-lang-arrow {
+            border: 1px solid $royal-blue;
+            background-color: $lavender;
+        }
+        .select-lang-main {
+            border: 1px solid $royal-blue;
+            background-color: $lavender;
+            .select-lang-arrow-over {
+                background-color: $lavender;
+            }
+            .select-lang-text {
+                color: $royal-blue;
+            }
+        }
+    }
+
+    &.sea-green {
+        .select-lang-arrow {
+            border: 1px solid $sea-green;
+            background-color: $azure;
+        }
+        .select-lang-main {
+            border: 1px solid $sea-green;
+            background-color: $azure;
+            .select-lang-arrow-over {
+                background-color: $azure;
+            }
+            .select-lang-text {
+                color: $sea-green;
+            }
+        }
+    }
+    
+}
+
+.modal-body {
+    height: 50%;
+    overflow-y: scroll;
+    .lang-item {
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        display: flex;
+        max-width: 100%;
+        width: 100%;
+        height: 30px;
+        padding-left: 56px;
+        flex-direction: row;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        background-position: -46px 50%;
+        -webkit-transition: all .4s ease;
+        transition: all .4s ease;
+        color: #8e8e8e;
+        font-weight: 700;
+        text-decoration: none;
+        background-size: 16px;
+        background-repeat: no-repeat;
+        background-image: url(#{$img-path}/Union-122x_1.png);
+        &:hover {
+            background-position: 15px 50%;
+            color: #464646;
+        }
+        &:focus {
+            background-image: url(#{$img-path}/Union-122x.png);
+            background-position: 25px 50%;
+            color: #464646;
+        }
+        &.selected {
+            background-image: url(#{$img-path}/Union-122x.png);
+            background-position: 25px 50%;
+            color: #464646;
+        }
+        &.disabled {
+            background-image: none;
+            color: rgba($color: #8e8e8e, $alpha: 0.5)
+        }
+    }
+}

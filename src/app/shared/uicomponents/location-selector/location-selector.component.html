@@ -1,0 +1,13 @@
+<div
+  class="location-selector"
+  (click)="onClickHandler($event)"
+  >
+  Location
+</div>
+<app-info-select-modal 
+  [(showable)]="show_modal"
+  [ClickDoneBtn]="onClickModalDone.bind(this)"
+  >
+    <h1>Select the Location</h1>
+    
+</app-info-select-modal>

@@ -1,0 +1,39 @@
+@import "variables";
+
+.on-site-interpreter-hero {
+    display: flex;
+    padding: 30px 10% 70px;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-image: url(#{$img-path}/on-site-page-background.png),-webkit-gradient(linear,left top,left bottom,from(#eaeeff),to(#fff));
+    background-image: url(#{$img-path}/on-site-page-background.png),linear-gradient(180deg,#e8feff,#fff);
+    background-position: 50% 0,0 0;
+    background-size: 950px,auto;
+    background-repeat: repeat-x,repeat;
+    color: #23b7bb;
+    text-align: center;
+    .heading {
+        margin-bottom: 5px;
+        font-weight: 700;
+        text-align: center;
+    }
+    .subheading {
+        margin-top: 0;
+        margin-bottom: 27px;
+        font-weight: 400;
+        text-align: center;
+    }
+    .text {
+        padding: 10px;
+        color: #23b7bb;
+        text-align: center;
+    }
+}

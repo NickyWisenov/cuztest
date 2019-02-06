@@ -1,0 +1,80 @@
+<div class="project-card row">
+  <div class="col-sm-6 project-left-col">
+    <div class="lang row">
+      <div class="col-sm-6 source-lang">
+        <app-select-lang type="source"></app-select-lang>
+        
+      </div>
+      <div class="col-sm-6 target-lang">
+        <app-select-lang type="target"></app-select-lang>
+      </div>
+    </div>
+    <div class="detail">
+      <input 
+        type="text" 
+        class="project-detail-input title" 
+        name="title"
+        maxlength="256"
+        autofocus="true"
+        required
+        (click)="onClickHandler($event)"
+        placeholder="Project Title" />
+      <app-doc-uploader></app-doc-uploader>
+      <app-doc-type-selector></app-doc-type-selector>
+      <div 
+        class="project-detail-picker dress-code"
+        (click)="onClickHandler($event)"
+        >
+        Dress Code
+      </div>
+      <textarea 
+        type="textarea" 
+        class="note-field" 
+        name="note" 
+        placeholder="Add Note"></textarea>
+    </div>
+  </div>
+  <div class="col-sm-6 project-right-col">
+      <div class="row heading">
+        <div class="col-sm-8 text-div">
+          <h3>Heading</h3>
+          <p>This is some text inside of a div block.</p>
+        </div>
+        <div class="col-sm-4 checkbox-div">
+            <app-custom-switch></app-custom-switch>
+        </div>
+      </div>
+      <app-deadline-selector></app-deadline-selector>
+      <div class="price-wrapper">
+        <div class="price-item-wrapper duration">
+          <div class="price-item-text">DURATION</div>
+          <div class="price-item-back">
+            <div class="price-item-amount">2 Hours</div>
+          </div>
+        </div> 
+        <div class="price-item-wrapper project-amount">
+          <div class="price-item-text">PROJECT AMOUNT</div>
+          <div class="price-item-back">
+            <div class="price-item-amount">C$ 123</div>
+          </div>
+        </div>
+        <div class="price-item-wrapper tax">
+          <div class="price-item-text">TAX</div>
+          <div class="price-item-back">
+            <div class="price-item-amount">C$ 17</div>
+          </div>
+        </div>
+        <div class="price-item-wrapper final-fee">
+          <div class="price-item-text">FINAL FEE</div>
+          <div class="price-item-back">
+            <div class="price-item-amount">C$ 140</div>
+          </div>
+        </div> 
+      </div>
+  </div>
+</div>
+<div class="button-row row">
+  <app-login-section-button>
+    FIND TRANSLATOR NOW
+  </app-login-section-button>
+</div>

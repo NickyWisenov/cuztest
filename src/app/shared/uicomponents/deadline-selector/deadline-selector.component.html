@@ -1,0 +1,14 @@
+<div
+  class="deadline-selector"
+  (click)="onClickHandler($event)"
+  >
+  {{ selected_datetime == null ? "Deadline" : selected_datetime }}
+</div>
+<app-info-select-modal 
+  [(showable)]="show_modal"
+  [ClickDoneBtn]="onClickModalDone.bind(this)"
+  [ClickCancelBtn]="onClickModalCancel.bind(this)"
+  >
+    <h1>Select the Deadline</h1>
+    <owl-date-time-inline [(ngModel)]="temptime" hour12Timer = "true"></owl-date-time-inline>
+</app-info-select-modal>

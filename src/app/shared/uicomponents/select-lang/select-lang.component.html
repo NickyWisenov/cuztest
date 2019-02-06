@@ -1,0 +1,28 @@
+<a href="#" class="select-lang-button" [ngClass]="[type, color]" (click)="onClickHandler($event)">
+  <div class="select-lang-arrow"></div>
+  <div class="select-lang-main">
+      <div class="select-lang-arrow-over"></div>
+      <div class="select-lang-text" *ngIf="selected_lang == null">
+        {{ type == 'source' && 'Source Language' || 'Target Language'}}
+      </div>
+      <div class="select-lang-text" *ngIf="selected_lang != null">
+        {{ selected_lang.name }}
+      </div>
+  </div>
+</a>
+<app-info-select-modal 
+  [(showable)]="show_modal"
+  [ClickDoneBtn]="onClickModalDone.bind(this)"
+  [ClickCancelBtn]="onClickModalCancel.bind(this)"
+  >
+  <app-search-input></app-search-input>
+  <div class="modal-body">
+    <a 
+      href="#" 
+      class="lang-item"
+      *ngFor="let lang of languages"
+      [class.selected]="selected_lang != null && lang.id == selected_lang.id"
+      [class.disabled]="notable_lang$ != null && lang.id == notable_lang$.id"
+      (click)="onSelectLang(lang, $event)">{{ lang.name }}</a>
+  </div>
+</app-info-select-modal>

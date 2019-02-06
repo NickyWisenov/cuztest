@@ -1,0 +1,43 @@
+<div 
+  class="doc-uploader"
+  (click)="onClickHandler($event)"
+  >
+  Upload Documents
+</div>
+<app-info-select-modal 
+  [(showable)]="show_modal"
+  [ClickDoneBtn]="onClickModalDone.bind(this)"
+  [ClickCancelBtn]="onClickModalCancel.bind(this)"
+  >
+  <div 
+    class="uploader-button"
+    (click)="onClickUpload($event)"
+    >
+    <input type="file" #file style="display: none" (change)="onFileAdded()" accept="application/pdf,application/txt,application/xmb,application/xliff,application/xlf,application/ts,application/po,image/*" />
+    <div>Add Document</div>
+  </div>
+
+  <div class="modal-body">
+    <div class="document-card" *ngIf="document_to_translate != null">
+      <div class="title-wrapper">
+        <div class="title-text">
+          <div class="title">
+            {{ document_title }}
+          </div>
+          <div 
+            class="document-detail-short status"
+            [ngClass]="{
+              'uploading': status == 1,
+              'failed': status == 2,
+              'success': status == 3
+            }"
+            >
+            {{ status_message[status-1] }}
+          </div>
+        </div>
+        <div class="action-icon">
+        </div>
+      </div>
+    </div>
+  </div>
+</app-info-select-modal>

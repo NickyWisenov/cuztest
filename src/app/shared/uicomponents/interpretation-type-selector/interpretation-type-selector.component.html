@@ -1,0 +1,12 @@
+<div
+  class="interpretation-type-selector"
+  (click)="onClickHandler($event)"
+  >
+  Interpretation Type
+</div>
+<app-info-select-modal  
+  [(showable)]="show_modal"
+  [ClickDoneBtn]="onClickModalDoneBtn.bind(this)"
+  >
+  <app-search-input></app-search-input>
+</app-info-select-modal>

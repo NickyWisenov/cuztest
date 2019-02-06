@@ -1,0 +1,19 @@
+@import "variables";
+
+.location-selector {
+    width: 100%;
+    padding: 9px 20px 9px 56px;
+    border-style: none none solid;
+    border-bottom-width: 1px;
+    border-bottom-color: $sea-green;
+    background-position: 14px 50%;
+    background-size: 22px;
+    background-repeat: no-repeat;
+    background-image: url(#{$img-path}/map-icon.png);
+    color: $sea-green;
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}

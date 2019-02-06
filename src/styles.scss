@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
+@import "variables";
+
+@import "../node_modules/ng-pick-datetime/assets/style/picker.min.css";
+
+// TypoGraphy
+body {
+    font-family: $font-family;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+h1 {
+    font-size: 38px;
+    line-height: 140%;
+}
+
+h3 {
+    margin: .67em 0;
+    margin-bottom: 0;
+    font-size: 26px;
+    line-height: 160%;
+    font-weight: 700;
+}
+
+blockquote, h1, h2, h3 {
+    margin-top: 10px;
+}
+
+b, label, optgroup, strong {
+    font-weight: 700;
+}
+
+a, p {
+    font-size: 16px;
+    line-height: 160%;
+}
+
+a:active, a:hover {
+    outline: 0;
+}
+
+
+
+// Owl Datetime picker Custom Styling
+.owl-dt-timer {
+    position: absolute;
+    left: 250px;
+    top: 0;
+}
+
+.owl-dt-inline-container {
+    box-shadow: none;
+}

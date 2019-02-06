@@ -1,0 +1,53 @@
+@import "variables";
+
+.document-translation-hero {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -webkit-box-direction: normal;
+    display: flex;
+    padding-right: 10%;
+    padding-left: 10%;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center; 
+    color: #fff;
+    height: 70vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-image: url(#{$img-path}/hero-company.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    text-align: left;
+
+    .hero-text {
+        padding: 10px;
+        border-radius: 6px;
+        text-align: center;
+        background-color: hsla(228.41379310344828,83.82%,66.08%,.35);
+    }
+
+    .hero-head-text {
+        width: 700px;
+        margin-bottom: 5px;
+        font-size: 34px;
+        font-weight: 700;
+    }
+
+    .hero-subhead-text {
+        margin-top: 0;
+        font-size: 24px;
+        width: 600px;
+        margin-bottom: 20px;
+        font-weight: 400;
+    }
+
+}

@@ -1,0 +1,34 @@
+<div class="login-section container">
+    <div class="login-wrapper row">
+        <div class="col-xs-12 col-sm-6 login-text-div">
+          <h1 class="login-heading">
+            Create a
+            <br />
+            <strong>New Account</strong>
+          </h1>
+          <hr class="login-seperator"/>
+          <p class="login-text-paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia lorem massa, in auctor ligula ultricies non. Donec nibh elit, venenatis eu erat id, cursus egestas tortor.
+          </p>
+          <a href="/login">Already have an account? Login now.</a>
+        </div>
+        <div class="col-xs-12 col-sm-6 login-button-div">
+          <div class="login-section-form">
+            <form name="newaccountform" id="newaccountForm">
+              <input type="email" [(ngModel)]="email" placeholder="Email" #ctrl="ngModel" required [ngModelOptions]="{standalone: true}"/>
+            </form>
+          </div>
+          <div class="terms-check">
+              <input type="checkbox" id="terms" [(ngModel)]="isAgreed" />
+              <label for="terms">
+                  I've read & accepted <strong>terms of use</strong>.
+              </label>
+          </div>
+          <app-login-section-button 
+            route_dest="security-code"
+            [ClickHandler]="onClickCreateBtn.bind(this)"
+            >Create a New Account</app-login-section-button>
+        </div>
+    </div>
+  </div>
+  

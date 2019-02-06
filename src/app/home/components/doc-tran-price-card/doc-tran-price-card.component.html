@@ -1,0 +1,57 @@
+<div class="doc-trans-price-card row">
+    <div class="col-xs-12 col-sm-6 left-col">
+      <div class="row select-lang">
+        <div class="col-sm-6 source-lang">
+          <app-select-lang type="source"></app-select-lang>
+        </div>
+        <div class="col-sm-6 target-lang">
+          <app-select-lang type="target"></app-select-lang>
+        </div>
+      </div>
+      <app-doc-uploader></app-doc-uploader>
+      <app-doc-type-selector></app-doc-type-selector>
+      <app-deadline-selector></app-deadline-selector>
+      <div class="row legal-aid">
+        <div class="col-sm-9 heading">
+          <h3>Legal Aid Case</h3>
+        </div>
+        <div class="col-sm-3 switch">
+          <app-custom-switch (checkEvent)="onCheckHandler($event)"></app-custom-switch>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 right-col">
+      <div class="calc-result">
+        <app-calc-result-wrapper
+          item_name="WORD COUNT"
+          amount="354"
+          color="royal-blue"
+          ></app-calc-result-wrapper>
+        <app-calc-result-wrapper
+          item_name="PROJECT AMOUNT"
+          amount="123"
+          unit="C$"
+          color="grey"
+          ></app-calc-result-wrapper>
+        <app-calc-result-wrapper
+          item_name="TAX"
+          amount="17"
+          unit="C$"
+          color="grey"
+          ></app-calc-result-wrapper>
+        <app-calc-result-wrapper
+          item_name="PROJECT AMOUNT"
+          amount="140"
+          unit="C$"
+          color="lime-green"
+          ></app-calc-result-wrapper>
+      </div>
+      <div class="button-div">
+        <app-general-button
+         color="lime-green">
+         FNID TRANSLATE NOW >
+        </app-general-button>
+      </div>
+
+    </div>
+</div>

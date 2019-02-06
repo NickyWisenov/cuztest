@@ -1,0 +1,50 @@
+@import "variables";
+
+.job-button {
+    display: inline-block;
+    cursor: pointer;
+    width: 600px;
+    margin: 10px;
+    padding: 24px 50px 24px 100px;
+    border-radius: 200px;
+    background-color: #fff;
+    background-position: 25px 50%;
+    background-repeat: no-repeat;
+    color: $sea-green;
+    font-size: 26px;
+    line-height: 140%;
+    font-weight: 300;
+    text-decoration: none;
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+    &:hover {
+        transform: translate3d(0px, 0px, 0px) scale3d(1.1, 1.1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+        transform-style: preserve-3d;
+        transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    &.on-site-interpretation {
+        background-image: url(#{$img-path}/on-site-interpretation.png);
+        background-position: 25px 50%;
+        background-size: 60px;
+        color: $sea-green;
+    }
+
+    &.document-translation {
+        background-image: url(#{$img-path}/document-translation.png);
+        background-position: 39px 50%;
+        background-size: 32px;
+        color: $royal-blue;
+    }
+    &.video-audio-interpretation {
+        background-image: url(#{$img-path}/video-audio-translation.png);
+        background-position: 39px 50%;
+        background-size: 26px;
+        color: $purple
+    }
+
+    div{
+        strong {
+            font-weight: 700
+        }
+    }
+}

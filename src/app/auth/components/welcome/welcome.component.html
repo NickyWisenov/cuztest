@@ -1,0 +1,30 @@
+<div class="login-section container">
+  <div class="login-wrapper row">
+      <div class="col-xs-12 col-sm-6 login-text-div">
+        <img src="../../assets/imgs/cuz-logo-white.png" alt="cuz-logo-gray">
+        <h1 class="login-heading">
+          Welcome to
+          <br />
+          <strong>Cuz Translation</strong>
+        </h1>
+        <hr class="login-seperator"/>
+        <p class="login-text-paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia lorem massa, in auctor ligula ultricies non. Donec nibh elit, venenatis eu erat id, cursus egestas tortor.
+        </p>
+        <app-introbutton [onClick]="watchIntro.bind(this)">Watch Intro!</app-introbutton>
+      </div>
+      <div class="col-xs-12 col-sm-6 login-button-div">
+        <app-login-section-button 
+          route_dest="sign-up" 
+          icon="new-user"
+          [ClickHandler]="onClickNewAccountBtn.bind(this)"
+          >I am new</app-login-section-button>
+        <app-login-section-button 
+          route_dest="login" 
+          icon="login"
+          [ClickHandler]="onClickLoginBtn.bind(this)"
+          >I have an account</app-login-section-button>
+      </div>
+  </div>
+</div>
+

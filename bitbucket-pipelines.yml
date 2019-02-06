@@ -1,0 +1,37 @@
+image: node:11
+pipelines:
+  branches:
+    test:
+      - step:
+        caches:
+          - node
+            # set GCLOUD_API_KEYFILE environment variable to base64-encoded keyfile as described
+            # here: https://confluence.atlassian.com/x/dm2xNQ
+        name: Deploy to GCloud
+        deployment: test
+        script:
+          - npm install
+          - npm install -g @angular/cli
+          - ng --version
+          - ls -a -l
+            # Install Google Cloud SDK
+          - export CLOUDSDK_CORE_DISABLE_PROMPTS=1
+            # Google Cloud SDK is pinned for build reliability. Bump if the SDK complains about deprecation.
+          - SDK_VERSION=231.0.0
+          - SDK_FILENAME=google-cloud-sdk-${SDK_VERSION}-linux-x86_64.tar.gz
+          - curl -o /tmp/google-cloud-sdk.tar.gz https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/${SDK_FILENAME}
+          - tar -xvf /tmp/google-cloud-sdk.tar.gz -C /tmp/
+          - /tmp/google-cloud-sdk/install.sh -q
+          - source /tmp/google-cloud-sdk/path.bash.inc
+            # Authenticating with the service account key file
+          - echo $GCLOUD_API_KEYFILE | base64 --decode --ignore-garbage > ./gcloud-api-key.json
+          - gcloud auth activate-service-account --key-file gcloud-api-key.json
+            # Linking to the Google Cloud project
+          - gcloud config set project $GCLOUD_PROJECT
+          - gcloud config set app/promote_by_default false
+            # Build the app and deploy.
+          - ng build --prod
+          # Deployment fails when gcloud with UnicodeDecodeError in api_lib/app/util.py:165 when
+          # deploying. I could not figure out why. `_variables.scss` file name seems to raise the
+          # error.
+          - gcloud app deploy app.yaml --project cuz-tech -v cuz-test --quiet --verbosity=debug

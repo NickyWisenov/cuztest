@@ -1,0 +1,9 @@
+<div class="introvideo-container" [ngClass]="{'hide-video': !isWatch}">
+  <div class="introvideo-content" >
+      <iframe
+        class="videoframe"
+        src="https://www.youtube.com/embed/cJ58Z1568lc">
+      </iframe>
+      <div class="introvideo-close-button" (click)="onClickClose()"></div>
+  </div>
+</div>
